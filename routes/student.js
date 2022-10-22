@@ -71,7 +71,7 @@ catch(err){
 router.put("/edit/:id",authenticate,async function(req,res){
    console.log(req.params.id);
     try{
-await Student.findOneAndUpdate({_id:req.params.id},{$set:{name:req.body.name,subject:req.body.subject,marks:req.body.marks }});
+await Student.findOneAndUpdate({_id:req.params.id},{$set:{Name:req.body.name,subject:req.body.subject,marks:req.body.marks }});
 res.status(200).json({
     message : "Successfully Updated"
 })
